@@ -9,7 +9,7 @@ echo "\e[96m          SCRIB INI TIDAK DI JUAL BELIKAN               \n";
 echo "\e[96m              SUBCRIBE CHANNEL YOUTUTBE :               \n";
 echo "\e[96m                    Ramz Tutorial                    \n";
 echo "\e[96m       BIAR BISA MAKIN SEMANGAT BIKIN KONTENNYA         \n";
-echo "\e[96m             * REPACK BY  : @RamaBna  *            \n";
+echo "\e[96m             * Create By  : @RamaBna  *            \n";
 echo "\e[96m ********\e[95m".date('[d-m-Y] [H:i:s]')."\e[96m********\n";
 echo "\e[95m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
 echo "\e[96m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
