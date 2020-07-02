@@ -41,7 +41,7 @@ $c = curl_init("https://api.gojekapi.com".$url);
     if (!$httpcode)
         return false;
     else {
-$header = substr($response, 0, curl_getinfo($c, CURLINFO_HEADER_SIZE));<?php<?php
+$header = substr($response, 0, curl_getinfo($c, CURLINFO_HEADER_SIZE));<?php<?phphttps://github.com/ramabna/dorjekjuni
 
 function request($url, $token = null, $data = null, $pin = null, $otpsetpin = null, $uuid = null){
 
