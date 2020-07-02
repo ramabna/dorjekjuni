@@ -2,29 +2,28 @@
  date_default_timezone_set('Asia/Jakarta');
  include "function.php";
  echo color("green","# # # # # # # # # # # # # # # # # # # # # # # \n");
- echo color("red","[•] Time : ".date('[d-m-Y] [H:i:s]')."       \n");
- echo color("green","[•] waiting areknya wes ga sayang :v ..... \n");
- echo color("red","[•] cara menulis nomor pakai 62xxxxxxxxxx \n");
+ echo color("blue","[•] Time : ".date('[d-m-Y] [H:i:s]')." \n");
+ echo color("red","[•] SUBSCRIBE RAMZ TUTORIAL........... \n");
+ echo color("blue","[•] cara menulis nomor pakai 62xxxxxxxxxx \n");
  echo color("green","# # # # # # # # # # # # # # # # # # # # # # # \n");
- echo color("red","[•] SUBSCRIBE RAMZ TUTORIAL \n");
  function change(){
  $nama = nama();
  $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
  ulang:
- echo color("blue","(•) Nomor : ");
+ echo color("nevy","(•) Nomor : ");
  $no = trim(fgets(STDIN));
  $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$no.'","signed_up_country":"ID"}';
  $register = request("/v5/customers", null, $data);
  if(strpos($register, '"otp_token"')){
  $otptoken = getStr('"otp_token":"','"',$register);
- echo color("red","+] Kode verifikasi sudah di kirim")."\n";
+ echo color("green","+] Kode verifikasi sudah di kirim")."\n";
  otp:
- echo color("blue","?] Otp: ");
+ echo color("nevy","?] Otp: ");
  $otp = trim(fgets(STDIN));
  $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
  $verif = request("/v5/customers/phone/verify", null, $data1);
  if(strpos($verif, '"access_token"')){
- echo color("red","+] Berhasil mendaftar");
+ echo color("green","+] Berhasil mendaftar");
  $token = getStr('"access_token":"','"',$verif);
  $uuid = getStr('"resource_owner_id":',',',$verif);
  echo "\n".color("yellow","+] Your access token : ".$token."\n\n");
@@ -45,7 +44,6 @@
  }
  gofood:
  sleep(3);
-}
  $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=10&page=1', $token);
  $total = fetch_value($cekvoucher,'"total_vouchers":',',');
  $voucher3 = getStr1('"title":"','",',$cekvoucher,"3");
