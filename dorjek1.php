@@ -54,6 +54,21 @@
         }else{
         echo "\n".color("red","🔐▶️ Message: ".$message);
 	      gocar:
+        echo "\n".color("nevy","🔒▶️ Claim voucher B");
+        echo "\n".color("blue","⏳▶︄1�7 Sabar");
+        for($a=1;$a<=3;$a++){
+        echo color("blue",".");
+        sleep(20);
+        }
+}
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD260620520"}');
+        $message = fetch_value($code1,'"message":"','"');
+        if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
+        echo "\n".color("pink","🔓▶️ Message: ".$message);
+        goto gocar;
+        }else{
+        echo "\n".color("red","🔐▶️ Message: ".$message);
+	      gocar:
         echo "\n".color("nevy","🔒▶️ Claim voucher A");
         echo "\n".color("blue","⏳▶︄1�7 Sabar");
         for($a=1;$a<=3;$a++){
