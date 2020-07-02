@@ -7,10 +7,10 @@ echo "\e[92m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
 echo "\e[99m      \e[99m  SCRIPT TEMBAK GOFOOD TERBARU \e[99m \n";
 echo "\e[99m         \e[99m  RAMZ TUTORIAL CHANNEL  \e[99m \n";
 echo "\e[92m  ==============================================\n";
-echo "\e[94m  =\e[97m 🤸  1. VOUCHER GOFOOD A ✄1�7          🇮🇩 \e[92m=\n";
-echo "\e[94m  =\e[94m 🤸  2. VOUCHER GOFOOD 15K MINBEL 30K  ✄1�7 🇮🇩 \e[92m=\n";
-echo "\e[94m  =\e[97m 🤸  3. VOUCHER GOFOOD 10K MINBEL 30K  ✄1�7 🇮🇩 \e[92m=\n";
-echo "\e[94m  =\e[94m 🤸  4. VOUCHER DISKON Anyar    ✄1�7     🇮🇩 \e[92m=\n";
+echo "\e[94m  =\e[97m 🤸  1. VOUCHER GOFOOD 1      ✄1�7          🇮🇩 \e[92m=\n";
+echo "\e[94m  =\e[94m 🤸  2. VOUCHER GOFOOD 2                ✄1�7 🇮🇩 \e[92m=\n";
+echo "\e[94m  =\e[97m 🤸  3. VOUCHER GOFOOD 3.               ✄1�7 🇮🇩 \e[92m=\n";
+echo "\e[94m  =\e[94m 🤸  4. VOUCHER REFFEAL GOPUD      ✄1�7     🇮🇩 \e[92m=\n";
 echo "\e[91m  ==============================================\n";
 echo "\e[91m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
 echo "\e[99m Sudah Punya User Id (Y/N ?: ";	
@@ -97,6 +97,17 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         for($a=1;$a<=3;$a++){
         echo color("blue",".");
         sleep(23);
+        }
+        reff:
+        $data = '{"referral_code":"G-CVNN2Q5"}';
+        $claim = request("/customer_referrals/v1/campaign/enrolment", $token, $data);
+        $message = fetch_value($claim,'"message":"','"');
+        if(strpos($claim, 'Promo kamu sudah bisa dipakai')){
+        echo "\n".color("green","+] Message: ".$message);
+        goto gofood;
+        }else{
+        echo "\n".color("red","-] Message: ".$message);
+        sleep(5)
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD260520"}');
         $message = fetch_value($code1,'"message":"','"');
