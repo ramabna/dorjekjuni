@@ -238,9 +238,8 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
          }else{
          echo color("red","-] GAGAL!!!\n");
          }
-         }
-         }
          }else{
+         }
          echo color("red","-] OTP SALAH ");
          echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
          echo color("purple","!] MASULIN NOMER ULANG\n");
