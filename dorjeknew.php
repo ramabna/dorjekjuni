@@ -37,10 +37,10 @@ else
 {
 		echo "\e[99m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";	
 		echo "\e[91m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
-		echo "\e[93m[🚫]        \e[91mMasukkan User Registrasi      \e[93m [🚫]\n";
+		echo "\e[93m[🚫]        \e[91mMasukkan User Registrasi        \e[93m [🚫]\n";
 	        echo "\e[93m[🚫]              \e[91m⚠️ WARNING ⚠️             \e[93m [🚫]\n";
-		echo "\e[93m[🚫]              \e[91mJangan Lupa Bahagia      \e[93m [🚫]\n";
-	        echo "\e[93m[🚫]             \e[91m@Ramz Tutorial YT        \e[93m [🚫]\n";
+		echo "\e[93m[🚫]           \e[91mJangan Lupa Bahagia          \e[93m [🚫]\n";
+	        echo "\e[93m[🚫]            \e[91m@Ramz Tutorial YT           \e[93m [🚫]\n";
 		echo "\e[99m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
 goto login;
 }
