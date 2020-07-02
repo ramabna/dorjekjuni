@@ -2,8 +2,8 @@
  date_default_timezone_set('Asia/Jakarta');
  include "function.php";
  echo color("green","# # # # # # # # # # # # # # # # # # # # # # # \n");
- echo color("red","[•] Time : ".date('[d-m-Y] [H:i:s]')." \n");
- echo color("green","[•] waiting proses..... \n");
+ echo color("red","[•] Time : ".date('[d-m-Y] [H:i:s]')."       \n");
+ echo color("green","[•] waiting areknya wes ga sayang :v ..... \n");
  echo color("red","[•] cara menulis nomor pakai 62xxxxxxxxxx \n");
  echo color("green","# # # # # # # # # # # # # # # # # # # # # # # \n");
  echo color("red","[•] SUBSCRIBE RAMZ TUTORIAL \n");
