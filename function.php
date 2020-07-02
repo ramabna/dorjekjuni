@@ -41,7 +41,7 @@ $c = curl_init("https://api.gojekapi.com".$url);
           curl_setopt($c, CURLOPT_HTTPPROXYTUNNEL, true); 
           curl_setopt($c, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5); 
           curl_setopt($c, CURLOPT_PROXY, $socks);
-        endif; 
+   endif; 
     $response = curl_exec($c);
     $httpcode = curl_getinfo($c);
     if (!$httpcode)
