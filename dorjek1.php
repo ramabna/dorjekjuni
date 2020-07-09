@@ -31,19 +31,55 @@
  echo "\n".color("nevy","?] Mau Redeem Voucher?: y/n ");
  $pilihan = trim(fgets(STDIN));
  if($pilihan == "y" || $pilihan == "Y"){
- echo color("red","===========(REDEEM VOUCHER)===========");
- reff:
- $data = '{"referral_code":"G-CVNN2Q5"}';
- $claim = request("/customer_referrals/v1/campaign/enrolment", $token, $data);
- $message = fetch_value($claim,'"message":"','"');
- if(strpos($claim, 'Promo kamu sudah bisa dipakai')){
- echo "\n".color("blue","+] Message: ".$message);
- goto gofood;
- }else{
- echo "\n".color("green","-] Message: ".$message);
- }
- gofood:
- sleep(3);
+ echo color("green","\n▬▬▬▬▬▬▬▬▬▬▬▬🎫AUTO REDEEM BRAY🎫▬▬▬▬▬▬▬▬▬▬▬▬");
+        echo "\n".color("white","🔐▶️ Claim Voc MAKAN");
+        echo "\n".color("yellow","⏳▶️ Please wait");
+        for($a=1;$a<=3;$a++){
+        echo color("yellow",".");
+        sleep(10);
+        }
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PAKEGOFOOD2206"}');
+        $message = fetch_value($code1,'"message":"','"');
+        if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
+        echo "\n".color("green","🔓▶️ Message: ".$message);
+        goto gocar;
+        }else{
+        echo "\n".color("red","🔐▶️ Message: ".$message);
+	gocar:
+        echo "\n".color("white","🔐▶️ Claim voc KENYANG ");
+        echo "\n".color("yellow","⏳▶️ Please wait");
+        for($a=1;$a<=3;$a++){
+        echo color("yellow",".");
+        sleep(20);
+        }
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2206"}');
+        $message = fetch_value($code1,'"message":"','"');
+        if(strpos($code1, 'Promo kamu sudah bisa dipakai.')){
+        echo "\n".color("green","🔓▶️ Message: ".$message);
+        goto gofood;
+        }else{
+        echo "\n".color("green","🔐▶️ Message: ".$message);
+        gofood:
+        echo "\n".color("white","🔐▶️ INI BUAT REFRESH");
+        echo "\n".color("yellow","⏳▶️ Please wait");
+        for($a=1;$a<=3;$a++){
+        echo color("white",".");
+        sleep(3);
+        }
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD0607"}');
+        $message = fetch_value($code1,'"message":"','"');
+        echo "\n".color("green","🔓▶️ Message: ".$message);
+        echo "\n".color("white","🔐▶️ INI REFRESH JUGA");
+        echo "\n".color("yellow","⏳▶️ Please wait");
+        for($a=1;$a<=3;$a++){
+        echo color("white",".");
+        sleep(1);
+        }
+        sleep(3);
+        $boba09 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD0607"}');
+        $messageboba09 = fetch_value($boba09,'"message":"','"');
+        echo "\n".color("green","🔓▶️ Message: ".$messageboba09);
+        sleep(3);
  $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=10&page=1', $token);
  $total = fetch_value($cekvoucher,'"total_vouchers":',',');
  $voucher3 = getStr1('"title":"','",',$cekvoucher,"3");
